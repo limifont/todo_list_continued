@@ -1,0 +1,8 @@
+<h1><%= @list.name %>:</h1> 
+<h6><%= link_to '[Edit Name]', edit_list_path %>
+
+<h4>This is where the list items will go.</h4>
+<
+
+<%= link_to 'DELETE LIST', list_path(@list), method: :delete %> |
+<%= link_to 'BACK', lists_path %>

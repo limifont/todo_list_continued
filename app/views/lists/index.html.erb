@@ -1,0 +1,17 @@
+<h1>Lists</h1>
+
+
+<% if @lists.any? %>
+  <!-- loop through and display links to each one -->
+  <ul>
+      <% @lists.each do |list| %>
+        <li>
+          <%= link_to  list.name, list_path(list) %>
+        </li>
+      <% end %>
+  </ul>
+<% else %>
+  <h3> You have nothing to do. Lucky you! If this isn't the case, then please add a new list by clicking the link below.</h3>
+<% end %>
+
+<%= link_to 'Add New List', new_list_path %>
